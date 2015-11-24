@@ -1,0 +1,87 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+
+		<!--##########################-->
+		<!-- Tab for general settings -->
+		<!--##########################-->
+		<sDefault>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>General</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.theme>
+						<TCEforms>
+							<label>Mode</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Playlists</numIndex>
+										<numIndex index="1">playlists</numIndex>
+									</numIndex>
+								</items>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</settings.theme>
+
+					<settings.channelId>
+						<TCEforms>
+							<label>Channel ID</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+							</config>
+						</TCEforms>
+					</settings.channelId>
+					<settings.apiServerToken>
+						<TCEforms>
+							<label>API Server Token</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+							</config>
+						</TCEforms>
+					</settings.apiServerToken>
+
+				</el>
+			</ROOT>
+		</sDefault>
+
+
+		<!--##########################-->
+		<!-- Tab for source settings   -->
+		<!--##########################-->
+		<source>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Sources</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.selectedPlaylists>
+						<TCEforms>
+							<label></label>
+							<config>
+								<type>user</type>
+								<userFunc>\Powrup\YoutubePlaylist\Controller\BackendController->getYouTubePlayLists</userFunc>
+							</config>
+						</TCEforms>
+					</settings.selectedPlaylists>
+
+
+				</el>
+			</ROOT>
+		</source>
+
+
+
+	</sheets>
+</T3DataStructure>

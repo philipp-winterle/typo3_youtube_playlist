@@ -1,0 +1,15 @@
+
+plugin.tx_youtubeplaylist {
+	view {
+		# cat=plugin.tx_youtubeplaylist/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:youtube_playlist/Resources/Private/Templates/
+		# cat=plugin.tx_youtubeplaylist/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:youtube_playlist/Resources/Private/Partials/
+		# cat=plugin.tx_youtubeplaylist/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:youtube_playlist/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_youtubeplaylist//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd">
+
+<f:for each="{playlists}" as="playlist" iteration="pl_iterator" key="playlistId">
+    <f:if condition="{pl_iterator.isFirst} != 'TRUE'">
+        <div class="yt_pl_additionalList" data-id="{playlistId}">
+            <div class="yt_pl_additionalList_title">
+                {playlist.Title}
+            </div>
+            <div class="yt_pl_additionalList_videos">
+                <section>
+                    <f:for each="{playlist.Videos}" as="video" iteration="video_iterator">
+                        <div data-id="{video.id}" class="videoItem">
+                            <div class="yt_pl_video_thumbnail"><img src="{video.thumb}"/></div>
+                            <div class="yt_pl_video_information">
+                                <div class="yt_pl_video_title">{video.title}</div>
+                                <div class="yt_pl_video_description hidden">
+                                    <f:format.crop maxCharacters="300">{video.description}</f:format.crop>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </section>
+            </div>
+            <div class="yt_pl_additionalList_control">
+                <div class="yt_pl_buttons">
+                    <div class="yt_pl_button left"></div>
+                    <div class="yt_pl_button right"></div>
+                </div>
+            </div>
+        </div>
+    </f:if>
+</f:for>

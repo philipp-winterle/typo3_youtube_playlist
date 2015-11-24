@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd">
+
+<div class="yt_pl">
+
+    <div class="yt_pl_main">
+        <div class="yt_pl_video_selector_container ">
+            <f:render partial="PlayList/MainPlaylist" arguments="{playlists: playlists}"></f:render>
+        </div>
+        <div class="yt_pl_video_player_container">
+            <f:alias map="{videos: '{videos->v:iterator.first(haystack: playlists)}' }">
+                <f:render partial="PlayList/Player" arguments="{video: videos.Videos.0}"></f:render>
+            </f:alias>
+        </div>
+    </div>
+    <div class="yt_pl_additional">
+        <f:render partial="PlayList/AdditionalPlaylists" arguments="{playlists: playlists}"></f:render>
+    </div>
+</div>

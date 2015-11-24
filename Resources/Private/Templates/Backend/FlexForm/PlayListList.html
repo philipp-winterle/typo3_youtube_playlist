@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<h4>YouTube Playlists</h4>
+<small>Select as many playlists as you want their videos to be listed in the frontend player. Only the latest 50 playlists will be available to select. The order you select playlists is important for displaying in the frontend. </small>
+<div class="yt_pl">
+    <f:form.hidden name="{PA.itemFormElName}" value="{PA.itemFormElValue}" id="yt_pl_selectedPlaylists"/>
+    <f:if condition="{playlists}">
+        <f:then>
+            <div class="yt_pl_selector_container uk-grid">
+                <ul class="yt_pl_playlists_selector uk-list uk-list-line uk-width-1-1">
+                    <f:for each="{playlists}" as="playList">
+                        <li data-id="{playList.id}" class="uk-panel uk-panel-hover ">
+                            <div class="yt_pl_thumbnail">
+                                <img src="{playList.snippet.thumbnails.default.url}"/>
+
+                                <div class="yt_pl_selection_number"></div>
+                            </div>
+                            <div class="yt_pl_information">
+                                <div class="yt_pl_title">{playList.snippet.title}</div>
+                                <div class="yt_pl_videocount">Videos: <span>{playList.contentDetails.itemCount}</span></div>
+                            </div>
+
+                        </li>
+                    </f:for>
+                </ul>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="uk-alert uk-alert-warning">You need to insert a valid Channel ID and API Server Token and press save to see the available youtube playlists.</div>
+        </f:else>
+    </f:if>
+
+</div>

@@ -1,0 +1,97 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    191,
+                    243
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": [
+
+                    ]
+                },
+                "name": "PlayList",
+                "objectsettings": {
+                    "addDeletedField": false,
+                    "addHiddenField": false,
+                    "addStarttimeEndtimeFields": false,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "ValueObject",
+                    "uid": "23824696632"
+                },
+                "propertyGroup": {
+                    "properties": [
+
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [
+
+        ],
+        "description": "This extension provides an interface to display a specific playlist on your page",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 6.2\n",
+            "disableLocalization": false,
+            "disableVersioning": true,
+            "sourceLanguage": "en",
+            "state": "beta",
+            "targetVersion": "6.2",
+            "version": "1.0.0"
+        },
+        "extensionKey": "youtube_playlist",
+        "name": "YouTube Playlist",
+        "originalExtensionKey": "",
+        "persons": [
+            {
+                "company": "ST-Sportservice",
+                "email": "winterle.p@st-sportservice.com",
+                "name": "Philipp Winterle",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "PlayList => show",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "key": "youtubeplaylistplugin",
+                "name": "YouTube Playlist Plugin"
+            }
+        ],
+        "vendorName": "ST"
+    },
+    "wires": [
+
+    ],
+    "log": {
+        "last_modified": "2015-09-23 11:33",
+        "extension_builder_version": "6.2.0",
+        "be_user": " (2)"
+    }
+}

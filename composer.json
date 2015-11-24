@@ -1,0 +1,30 @@
+{
+    "name": "powrup/youtube_playlist",
+    "type": "typo3-cms-extension",
+    "description": "YouTube playlist selector and player",
+    "homepage": "http://typo3.org",
+    "license": [
+        "GPL-2.0+"
+    ],
+    "keywords": [
+        "YouTube",
+        "Typo3",
+        "Playlist"
+    ],
+    "version": "1.0.3",
+	"config": {
+      "vendor-dir": "Libraries"
+    },
+    "require-bak": {
+        "google/apiclient": "^1.1"
+    },
+    "replace-bak": {
+        "youtube_playlist": "self.version"
+    },
+    "authors": [
+        {
+            "name": "Philipp Winterle",
+            "email": "winterle.p@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd">
+
+<ul class="yt_pl_video_selector">
+    <f:for each="{playlists}" as="playlist" iteration="pl_iterator">
+        <f:if condition="{pl_iterator.isFirst}">
+            <f:for each="{playlist.Videos}" as="video" iteration="video_iterator">
+                <li data-id="{video.id}" class="videoItem {f:if(condition: '{video_iterator.isFirst}', then: 'playing')}" >
+                    <div class="yt_pl_video_information">
+                        <div class="yt_pl_video_title">{video.title}</div>
+                        <div class="yt_pl_video_description hidden">
+                            <f:format.crop maxCharacters="300">{video.description}</f:format.crop>
+                        </div>
+                    </div>
+                    <div class="yt_pl_video_thumbnail_container">
+                        <div class="yt_pl_video_thumbnail" style="background-image: url({video.thumb})"></div>
+                    </div>
+                </li>
+            </f:for>
+        </f:if>
+    </f:for>
+</ul>
