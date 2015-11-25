@@ -1,3 +1,285 @@
-.tx_youtube_playlist{box-sizing:border-box;margin:0;padding:0;width:100%;scrollbar-face-color:#353634;scrollbar-track-color:transparent}.tx_youtube_playlist ::-webkit-scrollbar{width:10px;margin-right:-4px}.tx_youtube_playlist ::-webkit-scrollbar-track{background-color:transparent}.tx_youtube_playlist ::-webkit-scrollbar-thumb{background-color:#606060;opacity:0.4}.tx_youtube_playlist ::-webkit-scrollbar-thumb:hover{background-color:#C0C0C0;opacity:1}.tx_youtube_playlist .yt_pl .hidden{display:none}.tx_youtube_playlist .yt_pl .ellipsis{overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;white-space:nowrap}.tx_youtube_playlist .yt_pl .yt_pl_main{width:100%;height:520px;margin:0 auto;background-color:#2D2D29;color:#DFECE6;overflow:hidden;border-top:1px solid #1D1D1D;border-bottom:1px solid #1D1D1D;border-left:1px solid #1D1D1D}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container{float:right;width:330px;height:100%;min-height:520px;background-color:inherit;overflow-y:scroll}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector{list-style-type:none;padding:0;margin:0}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li{position:relative;height:130px;border-bottom:1px solid #272727}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li:last-child{border-bottom:none}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_information{position:absolute;z-index:10;bottom:0.75rem;left:0.75rem;line-height:1;margin:0 0.75rem 0 0}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_information .yt_pl_video_title{font-size:1.1em;font-weight:bold;vertical-align:middle;display:table-cell}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_thumbnail_container{height:100%;position:relative;overflow:hidden}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_thumbnail_container .yt_pl_video_thumbnail{position:absolute;height:100%;width:100%;-moz-transform:scale(1);-ms-transform:scale(1);-webkit-transform:scale(1);transform:scale(1);-moz-transition:transform ease-in-out 0.2s;-o-transition:transform ease-in-out 0.2s;-webkit-transition:transform ease-in-out 0.2s;transition:transform ease-in-out 0.2s}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_thumbnail_container .yt_pl_video_thumbnail:after{content:"";position:absolute;width:100%;height:100%;background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0.3)), color-stop(100%, rgba(0,0,0,0.8)));background:-moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);background:-webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);background:linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);-moz-transition:opacity ease-in-out 0.2s;-o-transition:opacity ease-in-out 0.2s;-webkit-transition:opacity ease-in-out 0.2s;transition:opacity ease-in-out 0.2s}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li:hover .yt_pl_video_thumbnail_container .yt_pl_video_thumbnail{-moz-transform:scale(1.05);-ms-transform:scale(1.05);-webkit-transform:scale(1.05);transform:scale(1.05)}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li:hover .yt_pl_video_thumbnail_container .yt_pl_video_thumbnail:after{opacity:0.5}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container{height:100%;background-color:inherit;overflow:hidden}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container .yt_pl_player_wrapper .yt_pl_video_player{width:100%;height:400px}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container .yt_pl_player_wrapper .yt_pl_video_information{padding:10px;overflow:hidden}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container .yt_pl_player_wrapper .yt_pl_video_information .yt_pl_video_title{font-weight:bold;font-size:1.5em;padding:0 0 10px 0}.tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container .yt_pl_player_wrapper .yt_pl_video_information .yt_pl_video_description{font-size:0.9em;font-style:italic;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;line-height:14px}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_additionalList{position:relative;background-color:#F3F3F3;width:100%;height:200px;margin-top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_additionalList .yt_pl_additionalList_title{position:relative;left:40px;line-height:30px;font-weight:bold}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_additionalList .yt_pl_additionalList_videos{position:absolute;right:40px;left:40px;top:30px;bottom:10px;overflow:hidden;white-space:nowrap}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_additionalList .yt_pl_additionalList_videos section{display:inline-block;white-space:nowrap}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button{position:absolute;top:0;bottom:0;width:35px;cursor:pointer}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button:hover{background:rgba(0,0,0,0.03)}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button:before{content:"";position:absolute;height:50px;left:10px;top:50px;border-right:15px solid #ccc;border-top:30px solid transparent;border-bottom:30px solid transparent}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.left{left:0}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.left:hover:before{border-right-color:#ccc}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.right{right:0}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.right:before{border-left:15px solid #ccc;border-right:none}.tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.right:hover:before{border-left-color:#ccc}.tx_youtube_playlist .yt_pl .yt_pl_additional .videoItem{float:left;width:213px;margin-right:4px}.tx_youtube_playlist .yt_pl .videoItem{position:relative;background:rgba(255,255,255,0.5);overflow:hidden;cursor:pointer;vertical-align:top}.tx_youtube_playlist .yt_pl .videoItem.playing:after{position:absolute;top:10px;right:10px;content:"playing";background-color:#d9534f;color:white;border-radius:.25em;padding:0.2em 0.6em 0.3em;font-size:75%;font-weight:700;line-height:1;text-align:center;white-space:nowrap;vertical-align:baseline;display:inline}.tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail{overflow:hidden;width:100%;height:120px;position:relative}.tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail:after{content:"";position:absolute;width:100%;height:100%;opacity:0.3;background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0.3)), color-stop(100%, rgba(0,0,0,0.8)));background:-moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);background:-webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);background:linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);-moz-transition:opacity ease-in-out 0.15s;-o-transition:opacity ease-in-out 0.15s;-webkit-transition:opacity ease-in-out 0.15s;transition:opacity ease-in-out 0.15s}.tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail img{position:absolute;width:100%;height:100%;-moz-transform:scale(1);-ms-transform:scale(1);-webkit-transform:scale(1);transform:scale(1);-moz-transition:transform ease-in-out 0.15s;-o-transition:transform ease-in-out 0.15s;-webkit-transition:transform ease-in-out 0.15s;transition:transform ease-in-out 0.15s}.tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail:hover img{-moz-transform:scale(1.05);-ms-transform:scale(1.05);-webkit-transform:scale(1.05);transform:scale(1.05)}.tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail:hover:after{opacity:0}.tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_information{font-size:0.9em;font-style:italic;line-height:15px;white-space:initial;padding:5px}@media (max-width: 768px){.tx_youtube_playlist .tx_youtube_playlist{padding-top:60px}.tx_youtube_playlist .tx_youtube_playlist .yt_pl_main .yt_pl_video_selector_container{width:200px}.tx_youtube_playlist .tx_youtube_playlist .yt_pl_additional .videoItem{width:197px}}@media (max-width: 600px){.tx_youtube_playlist .tx_youtube_playlist ::-webkit-scrollbar{width:0px;margin-right:5px;height:10px}.tx_youtube_playlist .tx_youtube_playlist .yt_pl_main .yt_pl_video_selector_container{float:none;width:100%;height:101px;min-height:60px;overflow-x:scroll;overflow-y:auto;white-space:nowrap}.tx_youtube_playlist .tx_youtube_playlist .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li{display:inline-block;width:150px;height:90px;overflow:hidden}.tx_youtube_playlist .tx_youtube_playlist .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_information{font-size:0.8em;white-space:initial}.tx_youtube_playlist .tx_youtube_playlist .yt_pl_additional .videoItem{width:197px}}@media (max-width: 400px){.tx_youtube_playlist .yt_pl_additional .videoItem{width:193px}}
+/* youTube Playlist Extension / base */
+.tx_youtube_playlist {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  scrollbar-face-color: #353634;
+  scrollbar-track-color: transparent; }
+  .tx_youtube_playlist ::-webkit-scrollbar {
+    width: 10px;
+    margin-right: -4px; }
+  .tx_youtube_playlist ::-webkit-scrollbar-track {
+    background-color: transparent; }
+  .tx_youtube_playlist ::-webkit-scrollbar-thumb {
+    background-color: #606060;
+    opacity: 0.4; }
+  .tx_youtube_playlist ::-webkit-scrollbar-thumb:hover {
+    background-color: #C0C0C0;
+    opacity: 1; }
+  .tx_youtube_playlist .yt_pl {
+    text-align: left; }
+    .tx_youtube_playlist .yt_pl .hidden {
+      display: none; }
+    .tx_youtube_playlist .yt_pl .ellipsis {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      white-space: nowrap; }
+    .tx_youtube_playlist .yt_pl .yt_pl_main {
+      width: 100%;
+      height: 520px;
+      margin: 0 auto;
+      background-color: #2D2D29;
+      color: #DFECE6;
+      overflow: hidden;
+      border-top: 1px solid #1D1D1D;
+      border-bottom: 1px solid #1D1D1D;
+      border-left: 1px solid #1D1D1D; }
+      .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container {
+        float: right;
+        width: 330px;
+        height: 100%;
+        min-height: 520px;
+        background-color: inherit;
+        overflow-y: scroll; }
+        .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector {
+          list-style-type: none;
+          padding: 0;
+          margin: 0; }
+          .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li {
+            position: relative;
+            height: 130px;
+            border-bottom: 1px solid #272727; }
+            .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li:last-child {
+              border-bottom: none; }
+            .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_information {
+              position: absolute;
+              z-index: 10;
+              bottom: 0.75rem;
+              left: 0.75rem;
+              line-height: 1;
+              margin: 0 0.75rem 0 0; }
+              .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_information .yt_pl_video_title {
+                font-size: 1.1em;
+                font-weight: bold;
+                vertical-align: middle;
+                display: table-cell; }
+            .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_thumbnail_container {
+              height: 100%;
+              position: relative;
+              overflow: hidden; }
+              .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_thumbnail_container .yt_pl_video_thumbnail {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -moz-transition: transform ease-in-out 0.2s;
+                -o-transition: transform ease-in-out 0.2s;
+                -webkit-transition: transform ease-in-out 0.2s;
+                transition: transform ease-in-out 0.2s; }
+                .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_thumbnail_container .yt_pl_video_thumbnail:after {
+                  content: "";
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.8)));
+                  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+                  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+                  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+                  -moz-transition: opacity ease-in-out 0.2s;
+                  -o-transition: opacity ease-in-out 0.2s;
+                  -webkit-transition: opacity ease-in-out 0.2s;
+                  transition: opacity ease-in-out 0.2s; }
+            .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li:hover .yt_pl_video_thumbnail_container .yt_pl_video_thumbnail {
+              -moz-transform: scale(1.05);
+              -ms-transform: scale(1.05);
+              -webkit-transform: scale(1.05);
+              transform: scale(1.05); }
+              .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li:hover .yt_pl_video_thumbnail_container .yt_pl_video_thumbnail:after {
+                opacity: 0.5; }
+      .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container {
+        height: 100%;
+        background-color: inherit;
+        overflow: hidden; }
+        .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container .yt_pl_player_wrapper .yt_pl_video_player {
+          width: 100%;
+          height: 400px; }
+        .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container .yt_pl_player_wrapper .yt_pl_video_information {
+          padding: 10px;
+          overflow: hidden; }
+          .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container .yt_pl_player_wrapper .yt_pl_video_information .yt_pl_video_title {
+            font-weight: bold;
+            font-size: 1.5em;
+            padding: 0 0 10px 0; }
+          .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_player_container .yt_pl_player_wrapper .yt_pl_video_information .yt_pl_video_description {
+            font-size: 0.9em;
+            font-style: italic;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            line-height: 14px; }
+    .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_additionalList {
+      position: relative;
+      background-color: #F3F3F3;
+      width: 100%;
+      height: 200px;
+      margin-top: 20px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_additionalList .yt_pl_additionalList_title {
+        position: relative;
+        left: 40px;
+        line-height: 30px;
+        font-weight: bold; }
+      .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_additionalList .yt_pl_additionalList_videos {
+        position: absolute;
+        right: 40px;
+        left: 40px;
+        top: 30px;
+        bottom: 10px;
+        overflow: hidden;
+        white-space: nowrap; }
+        .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_additionalList .yt_pl_additionalList_videos section {
+          display: inline-block;
+          white-space: nowrap; }
+    .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 35px;
+      cursor: pointer; }
+      .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button:hover {
+        background: rgba(0, 0, 0, 0.03); }
+      .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button:before {
+        content: "";
+        position: absolute;
+        height: 50px;
+        left: 10px;
+        top: 50px;
+        border-right: 15px solid #ccc;
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent; }
+      .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.left {
+        left: 0; }
+        .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.left:hover:before {
+          border-right-color: #cccccc; }
+      .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.right {
+        right: 0; }
+        .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.right:before {
+          border-left: 15px solid #ccc;
+          border-right: none; }
+        .tx_youtube_playlist .yt_pl .yt_pl_additional .yt_pl_button.right:hover:before {
+          border-left-color: #cccccc; }
+    .tx_youtube_playlist .yt_pl .yt_pl_additional .videoItem {
+      float: left;
+      width: 213px;
+      margin-right: 4px; }
+    .tx_youtube_playlist .yt_pl .videoItem {
+      position: relative;
+      background: rgba(255, 255, 255, 0.5);
+      overflow: hidden;
+      cursor: pointer;
+      vertical-align: top; }
+      .tx_youtube_playlist .yt_pl .videoItem.playing:after {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        content: "playing";
+        background-color: #d9534f;
+        color: white;
+        border-radius: .25em;
+        padding: .2em .6em .3em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        display: inline; }
+      .tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail {
+        overflow: hidden;
+        width: 100%;
+        height: 120px;
+        position: relative; }
+        .tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0.3;
+          background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.8)));
+          background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+          background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+          -moz-transition: opacity ease-in-out 0.15s;
+          -o-transition: opacity ease-in-out 0.15s;
+          -webkit-transition: opacity ease-in-out 0.15s;
+          transition: opacity ease-in-out 0.15s; }
+        .tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -moz-transition: transform ease-in-out 0.15s;
+          -o-transition: transform ease-in-out 0.15s;
+          -webkit-transition: transform ease-in-out 0.15s;
+          transition: transform ease-in-out 0.15s; }
+        .tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail:hover img {
+          -moz-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05); }
+        .tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_thumbnail:hover:after {
+          opacity: 0; }
+      .tx_youtube_playlist .yt_pl .videoItem .yt_pl_video_information {
+        font-size: 0.9em;
+        font-style: italic;
+        line-height: 15px;
+        white-space: initial;
+        padding: 5px; }
+
+@media (max-width: 768px) {
+  .tx_youtube_playlist .yt_pl {
+    padding-top: 60px; }
+    .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container {
+      width: 200px; }
+    .tx_youtube_playlist .yt_pl .yt_pl_additional .videoItem {
+      width: 197px; } }
+@media (max-width: 600px) {
+  .tx_youtube_playlist .yt_pl ::-webkit-scrollbar {
+    width: 0px;
+    margin-right: 5px;
+    height: 10px; }
+  .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container {
+    float: none;
+    width: 100%;
+    height: 101px;
+    min-height: 60px;
+    overflow-x: scroll;
+    overflow-y: auto;
+    white-space: nowrap; }
+    .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li {
+      display: inline-block;
+      width: 150px;
+      height: 90px;
+      overflow: hidden; }
+      .tx_youtube_playlist .yt_pl .yt_pl_main .yt_pl_video_selector_container .yt_pl_video_selector li .yt_pl_video_information {
+        font-size: 0.8em;
+        white-space: initial;
+        bottom: 0; }
+  .tx_youtube_playlist .yt_pl .yt_pl_additional .videoItem {
+    width: 197px; } }
+@media (max-width: 400px) {
+  .tx_youtube_playlist .yt_pl .yt_pl_additional .videoItem {
+    width: 193px; } }
 
 /*# sourceMappingURL=base.css.map */

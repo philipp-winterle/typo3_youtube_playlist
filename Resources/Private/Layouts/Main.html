@@ -1,5 +1,12 @@
 <div class="tx_youtube_playlist">
 
-    <f:render section="content"></f:render>
+    <f:if condition="{success}">
+        <f:then>
+            <f:render section="content"></f:render>
+        </f:then>
+        <f:else>
+            <f:flashMessages renderMode="div"/>
+        </f:else>
 
+    </f:if>
 </div>

@@ -5,17 +5,13 @@ define(
 	"tx_youtube_playlist_base",
 
 	//The array of dependencies
-	["jquery", "jquery-ui"],
+	["jquery"],
 
 	//The function to execute when all dependencies have loaded. The
 	//arguments to this function are the array of dependencies mentioned
 	//above.
 	function () {
 		jQuery = TYPO3.jQuery;
-
-		require( ["tx_youtube_playlist_uikit"], function ( ukit ) {
-			console.log("Uikit loaded");
-		} );
 
 		/**
 		 * This file is for usage with youtube playlist only

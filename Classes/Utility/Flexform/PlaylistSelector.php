@@ -12,7 +12,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  * @author Philipp Winterle
  * @package Utility
  */
-class PlaylistSelector {
+class PlayListSelector {
 
     const EXTENSION_NAME = 'youtube_playlist';
     const PLUGIN_NAME = 'youtubeplaylistplugin';
@@ -44,8 +44,8 @@ class PlaylistSelector {
 
         if (is_array($PA['row']['pi_flexform'])) {
             // TYPO3 7.5 and newer delivers an array
-            $this->apiServerToken = $PA['row']['pi_flexform']['data']['sDefault']['lDEF']['settings.apiServerToken']['vDEF'][0];
-            $this->ytChannelId = $PA['row']['pi_flexform']['data']['sDefault']['lDEF']['settings.channelId']['vDEF'][0];
+            $this->apiServerToken = $PA['row']['pi_flexform']['data']['sDefault']['lDEF']['settings.apiServerToken']['vDEF'];
+            $this->ytChannelId = $PA['row']['pi_flexform']['data']['sDefault']['lDEF']['settings.channelId']['vDEF'];
         } else {
             // TYPO3 7.4 or older delivers a string
             $flexForm = GeneralUtility::xml2array($PA['row']['pi_flexform']);
@@ -64,7 +64,7 @@ class PlaylistSelector {
             error_log("YouTube Playlist - PlaylistSelector: YouTube Channel ID could not be accessed.");
         }
 
-        $this->youTubeApi = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\Powrup\\YoutubePlaylist\\Utility\\YouTubeApi', $this->apiServerToken);
+        $this->youTubeApi = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Powrup\\YoutubePlaylist\\Utility\\YouTubeApi', $this->apiServerToken);
 
         // Set Channel ID
         $this->youTubeApi->setChannelId($this->ytChannelId);

@@ -55,10 +55,6 @@ class BackendController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	 */
 	protected $bootstrap;
 
-	public function __construct() {
-		parent::__construct();
-	}
-
 	public function init(&$PA, &$fobj) {
 		$configuration['extensionName'] = self::EXTENSION_NAME;
 		$configuration['pluginName'] = self::PLUGIN_NAME;
@@ -77,7 +73,9 @@ class BackendController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 		$doc = $this->getDocInstance();
 		$extRelPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath(self::EXTENSION_NAME);
 
-		$pageRenderer = $doc->getPageRenderer();
+		$pageRenderer = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
+		$pageRenderer->setLanguage($GLOBALS['LANG']->lang);
+		//$pageRenderer = $doc->getPageRenderer();
 		$pageRenderer->loadRequireJs();
 		$pageRenderer->addRequireJsConfiguration(
 			array(
@@ -85,19 +83,15 @@ class BackendController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 					'jquery' => $extRelPath . 'Resources/Public/JavaScript/jQuery/jquery-1.11.3.min',
 					'jquery-ui' => $extRelPath . 'Resources/Public/JavaScript/jQuery/jquery-ui-1.11.4.min',
 					'tx_youtube_playlist_base' => $extRelPath . 'Resources/Public/JavaScript/base',
-					"tx_youtube_playlist_uikit" => $extRelPath . 'Resources/Public/JavaScript/uikit/uikit.min'
 				),
 			)
 		);
 		$pageRenderer->loadRequireJsModule("jquery");
-		$pageRenderer->loadRequireJsModule("jquery-ui");
 		$pageRenderer->loadRequireJsModule("tx_youtube_playlist_base");
-		//$pageRenderer->loadRequireJsModule("tx_youtube_playlist_uikit");
 
 		$compress = true;
 
 		// Backend
-		$pageRenderer->addCssFile($extRelPath . 'Resources/Public/StyleSheets/uikit/css/uikit.docs.min.css', 'stylesheet', 'all', '', $compress);
 		$pageRenderer->addCssFile($extRelPath . 'Resources/Public/StyleSheets/backend.css', 'stylesheet', 'all', '', $compress);
 	}
 
@@ -140,7 +134,7 @@ class BackendController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 		$this->init($PA, $fobj);
 
 		/** @var \Powrup\YoutubePlaylist\Utility\PlayListSelector $playListSelector */
-		$playListSelector = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\Powrup\\YoutubePlaylist\\Utility\\PlayListSelector');
+		$playListSelector = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Powrup\\YoutubePlaylist\\Utility\\PlayListSelector');
 		$content = $playListSelector->getPlayListList($PA, $fobj, 20);
 
 		return $content;

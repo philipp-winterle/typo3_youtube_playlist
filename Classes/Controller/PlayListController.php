@@ -46,12 +46,12 @@ class PlayListController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
 	public function initializeAction() {
 		$this->response->addAdditionalHeaderData('<link rel="stylesheet" type="text/css" href="' . ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/StyleSheets/base.css" />');
-		$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/yt_pl.js" />');
+		$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/yt_pl.js"></script>');
 
 		$this->youtubeChannelId = $this->settings["channelId"];
 		$this->youtubeServerApiToken = $this->settings["apiServerToken"];
 
-		$this->youTubeApi = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\Powrup\\YoutubePlaylist\\Utility\\YouTubeApi', $this->youtubeServerApiToken);
+		$this->youTubeApi = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Powrup\\YoutubePlaylist\\Utility\\YouTubeApi', $this->youtubeServerApiToken);
 	 }
 
  /**
@@ -64,61 +64,86 @@ class PlayListController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
 		// Playlist IDs
 		$playlistIdStr = $this->settings["selectedPlaylists"];
-		$playlistIdArr = explode(",", $playlistIdStr);
 
-		$videoArr = array();
+		if (empty($playlistIdStr)) {
+			$this->addFlashMessage(
+					"You need to select at least one playlist in your plugin configuration.",
+					$messageTitle = 'Ooops, you did it again',
+					$severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING,
+					$storeInSession = TRUE
+			);
+		} else {
+			$playlistIdArr = explode(",", $playlistIdStr);
 
-		if (is_array($playlistIdArr)) { // if explode gives an array means: $playlistIdStr contains selected playlists
+			$videoArr = array();
+			$success = false;
 
-			// iterate through playlists and get videos
-			foreach($playlistIdArr as $playlistId) {
-				$tmpPlVideos = array();
-				$tmpPlTitle = "";
-				/* @var \Google_Service_YouTube_PlaylistListResponse $playList */
-				$playList = $this->youTubeApi->getPlaylist($playlistId);
-				$playListItems = $playList->getItems();
-				if (isset($playListItems) && !empty($playListItems)) {
-					/* @var \Google_Service_YouTube_Playlist $playListItem */
-					$playListItem = $playListItems[0];
-					/* @var \Google_Service_YouTube_PlaylistSnippet $playListData */
-					$playListData = $playListItem->getSnippet();
-					$tmpPlTitle = $playListData->getTitle();
-				}
-
-				/* @var \Google_Service_YouTube_PlaylistItemListResponse) $plVideos */
-				$plVideos = $this->youTubeApi->getPlaylistVideos($playlistId);
-				$plVideos = $plVideos->getItems();
-				if (isset($plVideos) && !empty($plVideos)) {
-					/* @var \Google_Service_YouTube_Video $plVideo */
-					foreach($plVideos as $plVideo) {
-						/* @var \Google_Service_YouTube_VideoStatus $videoStatus */
-						$videoStatus = $plVideo->getStatus();
-						$privacyStatus = $videoStatus->getPrivacyStatus();
-
-						if ($privacyStatus === "public") {
-							/* @var \Google_Service_YouTube_PlaylistItemSnippet $videoData */
-							$videoData = $plVideo->getSnippet();
-							/* @var \Google_Service_YouTube_ThumbnailDetails $thumbnails */
-							$thumbnails = $videoData->getThumbnails();
-							/* @var \Google_Service_YouTube_Thumbnail $thumbnail */
-							$thumbnail = $thumbnails->getMedium();
-
-							array_push($tmpPlVideos, array(
-									"thumb" => $thumbnail->getUrl(),
-									"title" => $videoData->getTitle(),
-                                    "description" => $videoData->getDescription(),
-									"id" => $videoData->getResourceId()["videoId"]
-							));
+			if (is_array($playlistIdArr)) { // if explode gives an array means: $playlistIdStr contains selected playlists
+				// iterate through playlists and get videos
+				foreach ($playlistIdArr as $playlistId) {
+					$tmpPlVideos = array();
+					$tmpPlTitle = "";
+					/* @var \Google_Service_YouTube_PlaylistListResponse $playList */
+					$playList = $this->youTubeApi->getPlaylist($playlistId);
+					if (isset($playList) && $playList !== false) {
+						$success = true;
+						$playListItems = $playList->getItems();
+						if (isset($playListItems) && !empty($playListItems)) {
+							/* @var \Google_Service_YouTube_Playlist $playListItem */
+							$playListItem = $playListItems[0];
+							/* @var \Google_Service_YouTube_PlaylistSnippet $playListData */
+							$playListData = $playListItem->getSnippet();
+							$tmpPlTitle = $playListData->getTitle();
 						}
+
+						/* @var \Google_Service_YouTube_PlaylistItemListResponse) $plVideos */
+						$plVideosStore = $this->youTubeApi->getPlaylistVideos($playlistId);
+						if (isset($plVideosStore) && $plVideosStore !== false) {
+							$plVideos = $plVideosStore->getItems();
+							if (isset($plVideos) && !empty($plVideos)) {
+								/* @var \Google_Service_YouTube_Video $plVideo */
+								foreach ($plVideos as $plVideo) {
+									/* @var \Google_Service_YouTube_VideoStatus $videoStatus */
+									$videoStatus = $plVideo->getStatus();
+									$privacyStatus = $videoStatus->getPrivacyStatus();
+
+									if ($privacyStatus === "public") {
+										/* @var \Google_Service_YouTube_PlaylistItemSnippet $videoData */
+										$videoData = $plVideo->getSnippet();
+										/* @var \Google_Service_YouTube_ThumbnailDetails $thumbnails */
+										$thumbnails = $videoData->getThumbnails();
+										/* @var \Google_Service_YouTube_Thumbnail $thumbnail */
+										$thumbnail = $thumbnails->getMedium();
+
+										array_push($tmpPlVideos, array(
+												"thumb" => $thumbnail->getUrl(),
+												"title" => $videoData->getTitle(),
+												"description" => $videoData->getDescription(),
+												"id" => $videoData->getResourceId()["videoId"]
+										));
+									}
+								}
+								$videoArr[$playlistId] = [
+										"Title" => $tmpPlTitle,
+										"Videos" => $tmpPlVideos
+								];
+							}
+						}
+					} else {
+						$this->addFlashMessage(
+								"Oops, you probably forgot to enter you channel id and server api token or your selected playlist does not container any videos.",
+								$messageTitle = 'Ooops, you did it again',
+								$severity = \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING,
+								$storeInSession = TRUE
+						);
 					}
-					$videoArr[$playlistId] = [
-							"Title" => $tmpPlTitle,
-							"Videos" => $tmpPlVideos
-					];
 				}
 			}
 		}
 
+
+
+		$this->view->assign("success", $success);
 		$this->view->assign('playlists', $videoArr);
 	}
 

@@ -55,6 +55,8 @@ $transitionTime: 0.2s !default;
   scrollbar-track-color: transparent;
 
   .yt_pl {
+    text-align: left;
+
     .hidden {
       display: none;
     }
@@ -337,59 +339,61 @@ $transitionTime: 0.2s !default;
     }
   }
 
-  @media (max-width: 768px) {
-    .tx_youtube_playlist {
-      padding-top: 60px;
+}
 
-      .yt_pl_main .yt_pl_video_selector_container {
-        width: 200px;
-      }
+@media (max-width: 768px) {
+  .tx_youtube_playlist .yt_pl {
+    padding-top: 60px;
 
-      .yt_pl_additional .videoItem {
-        //    width: calc(100%/3 - 9px);
-        width: 197px;
-      }
+    .yt_pl_main .yt_pl_video_selector_container {
+      width: 200px;
+    }
+
+    .yt_pl_additional .videoItem {
+      //    width: calc(100%/3 - 9px);
+      width: 197px;
     }
   }
+}
 
-  @media (max-width: 600px) {
-    .tx_youtube_playlist {
-      ::-webkit-scrollbar {
-        width:        0px;
-        margin-right: 5px;
-        height:       10px;
-      }
+@media (max-width: 600px) {
+  .tx_youtube_playlist .yt_pl {
+    ::-webkit-scrollbar {
+      width:        0px;
+      margin-right: 5px;
+      height:       10px;
+    }
 
-      .yt_pl_main .yt_pl_video_selector_container {
-        float:       none;
-        width:       100%;
-        height:      101px;
-        min-height:  60px;
-        overflow-x:  scroll;
-        overflow-y:  auto;
-        white-space: nowrap;
-        .yt_pl_video_selector li {
-          display:  inline-block;
-          width:    150px;
-          height:   90px;
-          overflow: hidden;
-          .yt_pl_video_information {
-            font-size:   0.8em;
-            white-space: initial;
-          }
+    .yt_pl_main .yt_pl_video_selector_container {
+      float:       none;
+      width:       100%;
+      height:      101px;
+      min-height:  60px;
+      overflow-x:  scroll;
+      overflow-y:  auto;
+      white-space: nowrap;
+      .yt_pl_video_selector li {
+        display:  inline-block;
+        width:    150px;
+        height:   90px;
+        overflow: hidden;
+        .yt_pl_video_information {
+          font-size:   0.8em;
+          white-space: initial;
+          bottom: 0; 
         }
       }
-      .yt_pl_additional .videoItem {
-        //    width: calc(50% - 9px);
-        width: 197px;
-      }
+    }
+    .yt_pl_additional .videoItem {
+      //    width: calc(50% - 9px);
+      width: 197px;
     }
   }
+}
 
-  @media (max-width: 400px) {
-    .yt_pl_additional .videoItem {
-      //    width: calc(100% - 5px);
-      width: 193px;
-    }
+@media (max-width: 400px) {
+  .tx_youtube_playlist .yt_pl .yt_pl_additional .videoItem {
+    //    width: calc(100% - 5px);
+    width: 193px;
   }
 }

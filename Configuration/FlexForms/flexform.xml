@@ -71,7 +71,7 @@
 							<label></label>
 							<config>
 								<type>user</type>
-								<userFunc>\Powrup\YoutubePlaylist\Controller\BackendController->getYouTubePlayLists</userFunc>
+								<userFunc>Powrup\YoutubePlaylist\Controller\BackendController->getYouTubePlayLists</userFunc>
 							</config>
 						</TCEforms>
 					</settings.selectedPlaylists>

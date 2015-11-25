@@ -8,18 +8,16 @@ $composerAutoloadFile = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extP
 require_once($composerAutoloadFile);
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'PowrUp.' . $_EXTKEY,
+	'Powrup.' . $_EXTKEY,
 	'Youtubeplaylistplugin',
 	array(
 		'PlayList' => 'show',
-		
 	),
 	// non-cacheable actions
 	array(
 		'PlayList' => '',
-		
 	)
 );
 
 // Flexform record selector
-require_once \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Classes/Utility/Flexform/PlaylistSelector.php';
+require_once \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Classes/Utility/Flexform/PlayListSelector.php';

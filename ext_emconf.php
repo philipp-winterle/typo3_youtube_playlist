@@ -10,25 +10,25 @@
  * "version" and "dependencies" must not be touched!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = array(
-	'title' => 'YouTube Playlist',
-	'description' => 'This extension provides an interface to display a specific playlist on your page',
-	'category' => 'plugin',
-	'author' => 'Philipp Winterle',
-	'author_email' => 'winterle.p@gmail.com',
-	'state' => 'stable',
+$EM_CONF[$_EXTKEY] = array (
+  'title' => 'YouTube Playlist',
+  'description' => 'This extension provides an interface to display a specific playlist on your page',
+  'category' => 'plugin',
+  'author' => 'Philipp Winterle',
+  'author_email' => 'winterle.p@gmail.com',
+  'state' => 'stable',
 	'internal' => '',
 	'uploadfolder' => '0',
-	'createDirs' => '',
-	'clearCacheOnLoad' => 0,
-	'version' => '1.0.6',
+  'createDirs' => '',
+  'version' => '1.0.6',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2.1-6.2.99',
-		),
+      'typo3' => '6.2.1-7.6.99',
+    ),
 		'conflicts' => array(
-		),
+    ),
 		'suggests' => array(
-		),
-	),
+    ),
+  ),
 );
+
