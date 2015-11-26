@@ -12,7 +12,17 @@ plugin.tx_youtubeplaylist {
 		# uncomment the following line to enable the new Property Mapper.
 		rewrittenPropertyMapper = 1
 	}
+
+	#includeLibJS = jQuery
+
+
+	config {
+		addJQuery = {$plugin.tx_youtubeplaylist.config.addJQuery}
+	}
+
 }
+
+
 
 plugin.tx_youtubeplaylist._CSS_DEFAULT_STYLE (
 	textarea.f3-form-error {

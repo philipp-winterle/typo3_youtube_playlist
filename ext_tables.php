@@ -21,7 +21,7 @@ require_once($configFile);
 	'YouTube Playlist Plugin'
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'YouTube Playlist');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'YouTube Playlist Configuration');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_youtubeplaylist_domain_model_playlist', 'EXT:youtube_playlist/Resources/Private/Language/locallang_csh_tx_youtubeplaylist_domain_model_playlist.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_youtubeplaylist_domain_model_playlist');
