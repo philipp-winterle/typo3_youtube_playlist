@@ -7,6 +7,9 @@ The composer.json needs to be modified in order to use composer to update the go
 The "require-bak" property needs to be like this in order to work with TYPO3 6.2.* because of their own composer implementation. 
 Otherwise it will throw an error because of missing installed extension google api client. 
 
+# Requirements
+    TYPO3 6.2 - 7.6
+
 # Install
     - Download and install the extension from TER or Composer
     - Add the TypoScript templates into your root or extension template
