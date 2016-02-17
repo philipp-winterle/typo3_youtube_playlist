@@ -21,3 +21,17 @@ require_once($composerAutoloadFile);
 
 // Flexform record selector
 require_once \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Classes/Utility/Flexform/PlayListSelector.php';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+	'mod {
+     wizards.newContentElement.wizardItems.plugins {
+        elements {
+			tx_youtube_playlist {
+			   icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif
+			   title = YouTube Playlist
+			   description = Select all playlists of a YouTube channel to display them in a specific order in the frontend.
+			   params = &defVals[tt_content][CType]=list&defVals[tt_content][list_type]=youtubeplaylist_youtubeplaylistplugin
+			}
+        }
+     }
+   }'
+);
