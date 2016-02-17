@@ -14,14 +14,17 @@ h1 {
 
 .yt_pl_selector_container {
   background-color: #dedede;
-  margin: 10px 10px;
-  display: inline;
+  //margin: 10px 10px;
+  //display: inline;
 
   ul.yt_pl_playlists_selector {
     width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 
     li {
-      width:            32%;
+      width:            32.4%;
       height:           90px;
       margin:           2px !important;
       padding:          2px !important;

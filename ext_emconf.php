@@ -5,8 +5,8 @@
  *
  *
  * Manual updates:
- * Only the data in the array - anything else is removed by next write.
- * "version" and "dependencies" must not be touched!
+ * Only the data in the array - everything else is removed by next
+ * writing. "version" and "dependencies" must not be touched!
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
@@ -16,18 +16,25 @@ $EM_CONF[$_EXTKEY] = array(
     'author' => 'Philipp Winterle',
     'author_email' => 'winterle.p@gmail.com',
     'state' => 'stable',
-    'internal' => '',
-    'uploadfolder' => '0',
+	'uploadfolder' => false,
     'createDirs' => '',
-    'version' => '1.0.8',
-    'constraints' => array(
-        'depends' => array(
+	'version' => '1.0.9',
+	'constraints' => 
+	array (
+		'depends' => 
+		array (
             'extbase' => '6.2.0-7.6.99',
 			'fluid' => '6.2.0-7.6.99',
 			'typo3' => '6.2.1-7.6.99',
         ),
-        'conflicts' => array(),
-        'suggests' => array(),
+		'conflicts' => 
+		array (
+		),
+		'suggests' => 
+		array (
     ),
+	),
+	'clearcacheonload' => false,
+	'author_company' => NULL,
 );
 

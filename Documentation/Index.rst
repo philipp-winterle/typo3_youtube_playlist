@@ -5,6 +5,7 @@
 
 .. include:: Includes.txt
 
+
 .. _start:
 
 =============================================================
@@ -23,10 +24,10 @@ YouTube Playlist
 		en
 
 	:Description:
-		This extension provides an interface to display a specific playlist on your page
+		This extension provides an interface to display a specific playlist on your page.
 
 	:Keywords:
-		comma,separated,list,of,keywords
+		youtube,playlist,fancy
 
 	:Copyright:
 		2015
@@ -35,31 +36,26 @@ YouTube Playlist
 		Philipp Winterle
 
 	:Email:
-		winterle.p@st-sportservice.com
+		philipp.winterle@gmail.com
 
 	:License:
-		This document is published under the Open Content License
-		available from http://www.opencontent.org/opl.shtml
+		This document is published under the Open Publication License
+		available from http://www.opencontent.org/openpub/
 
 	:Rendered:
 		|today|
 
 	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
+	a GNU/GPL CMS/Framework available from `www.typo3.org <https://typo3.org/>`__.
+
 
 	**Table of Contents**
 
 .. toctree::
-	:maxdepth: 5
+	:maxdepth: 4
 	:titlesonly:
-	:glob:
 
 	Introduction/Index
-	User/Index
-	Administrator/Index
-	Configuration/Index
-	Developer/Index
-	KnownProblems/Index
-	ToDoList/Index
-	ChangeLog/Index
-	Targets
+	UsersManual/Index
+	AdministratorManual/Index
+	Links
