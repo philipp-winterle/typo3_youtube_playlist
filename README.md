@@ -9,6 +9,7 @@ Otherwise it will throw an error because of missing installed extension google a
 
 # Requirements
     TYPO3 6.2 - 7.6
+    VHS 2.4.0- 2.4.*
 
 # Install
     - Download and install the extension from TER or Composer
