@@ -20,7 +20,7 @@ require_once($composerAutoloadFile);
 );
 
 // Flexform record selector
-require_once \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Classes/Utility/Flexform/PlayListSelector.php';
+require_once \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Classes/Utility/Flexform/PlaylistSelector.php';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript($_EXTKEY, "constants", '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:youtube_playlist/Configuration/TypoScript/constants.txt">');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript($_EXTKEY, "setup", '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:youtube_playlist/Configuration/TypoScript/setup.txt">');
