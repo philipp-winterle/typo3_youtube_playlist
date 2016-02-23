@@ -6,25 +6,35 @@
     "license": [
         "GPL-2.0+"
     ],
+	"authors": [
+        {
+            "name": "Philipp Winterle",
+            "email": "winterle.p@gmail.com"
+        }
+    ],
     "keywords": [
         "YouTube",
         "Typo3",
         "Playlist"
     ],
-    "version": "1.0.3",
+	"support": {
+		"issues": "https://forge.typo3.org/projects/extension-youtube_playlist",
+		"code": "https://github.com/hummal/typo3_youtube_playlist"
+	},
+    "version": "1.0.12",
 	"config": {
       "vendor-dir": "Libraries"
     },
-    "require-bak": {
+    "require": {
+		"typo3/cms-core": ">=6.2.0,<8.0",
         "google/apiclient": "^1.1"
     },
-    "replace-bak": {
+    "replace": {
         "youtube_playlist": "self.version"
     },
-    "authors": [
-        {
-            "name": "Philipp Winterle",
-            "email": "winterle.p@gmail.com"
-        }
-    ]
+    "autoload": {
+		"psr-4": {
+			"Powrup\\YoutubePlaylist\\": "Classes"
+		}
+	}
 }
