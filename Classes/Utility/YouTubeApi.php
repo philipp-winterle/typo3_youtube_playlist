@@ -1,6 +1,8 @@
 <?php
 namespace Powrup\YoutubePlaylist\Utility;
 
+use Google_Service_YouTube_PlaylistItemListResponse;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -122,20 +124,51 @@ class YouTubeApi {
      */
     public function getPlaylistVideos($playlistId) {
         try {
-            if (isset($playlistId))
-            $playlistItemsResponse = $this->apiService->playlistItems->listPlaylistItems('snippet,status', array(
-                'playlistId' => $playlistId,
-                'maxResults' => 50
-            ));
+            $result = [];
 
-            return $playlistItemsResponse;
+            if (isset($playlistId)) {
+                /** @var \Google_Service_YouTube_PlaylistItemListResponse $playlistItemsResponse */
+                $playlistItemsResponse = $this->apiService->playlistItems->listPlaylistItems('snippet,status', array(
+                    'playlistId' => $playlistId,
+                    'maxResults' => 50
+                ));
 
+                $result[] = $playlistItemsResponse;
+
+                $nextPageToken = $playlistItemsResponse->getNextPageToken();
+
+                while ($nextPageToken) {
+                    $playlistItemsResponse = $this->apiService->playlistItems->listPlaylistItems('snippet,status', array(
+                        'playlistId' => $playlistId,
+                        'maxResults' => 50,
+                        'pageToken' => $nextPageToken
+                    ));
+
+                    $result[] = $playlistItemsResponse;
+
+                    $nextPageToken = $playlistItemsResponse->getNextPageToken();
+                }
+            }
+
+            $realResult = [];
+
+            foreach ($result as $_ => $collectionItem) {
+                foreach ($collectionItem as $item) {
+                    $realResult[] = $item;
+                }
+            }
+            /** @var \Google_Service_YouTube_PlaylistItemListResponse $response */
+            $response = GeneralUtility::makeInstance(Google_Service_YouTube_PlaylistItemListResponse::class);
+            $response->setItems($realResult);
+
+            return $response;
         } catch (\Google_Service_Exception $e) {
             error_log(sprintf('YouTube Playlist Extension: A service error occurred: %s', htmlspecialchars($e->getMessage())));
         } catch
         (\Google_Exception $e) {
             error_log(sprintf('YouTube Playlist Extension: An client error occurred: %s', htmlspecialchars($e->getMessage())));
         }
+
         return false;
     }
 }
