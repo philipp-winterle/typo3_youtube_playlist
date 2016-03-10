@@ -21,12 +21,12 @@
 		"issues": "https://forge.typo3.org/projects/extension-youtube_playlist",
 		"code": "https://github.com/hummal/typo3_youtube_playlist"
 	},
-    "version": "1.0.12",
+    "version": "1.0.13",
 	"config": {
       "vendor-dir": "Libraries"
     },
     "require": {
-		"typo3/cms-core": ">=6.2.0,<8.0",
+		"typo3/cms-core": ">=7.6,<8.0",
         "google/apiclient": "^1.1"
     },
     "replace": {
