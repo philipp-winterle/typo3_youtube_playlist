@@ -8,7 +8,7 @@ The "require-bak" property needs to be like this in order to work with TYPO3 6.2
 Otherwise it will throw an error because of missing installed extension google api client. 
 
 # Requirements
-    TYPO3 6.2 - 7.6
+    TYPO3 7.6+
     VHS 2.4.0- 2.4.*
 
 # Install
@@ -23,6 +23,9 @@ Otherwise it will throw an error because of missing installed extension google a
     - If you've done right you will see all the available playlists of the channel
     - Select as many playlists as you want to be displayed at the frontend
         - The first playlist selected will be the main playlist. All further playlists are displayed under the player window
+
+# IMPORTANT
+    - If you want to use it on TYPO3 6.2 you are able to, but you need to remove the composer.json manually and clear you cache.
 
 If you like this extension and if you want to ensure it is enhanced you can donate to me (https://www.paypal.me/PhilippWinterle)        
 
