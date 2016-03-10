@@ -23,10 +23,10 @@ $EM_CONF[$_EXTKEY] = array(
 	array (
 		'depends' => 
 		array (
-            'extbase' => '6.2.0-7.6.99',
+            'extbase' => '7.6.0-7.6.99',
 			'fluid' => '6.2.0-7.6.99',
 			'vhs' => '2.4.0-2.4.99',
-			'typo3' => '6.2.1-7.6.99',
+			'typo3' => '7.6.0-7.6.99',
         ),
 		'conflicts' => 
 		array (
