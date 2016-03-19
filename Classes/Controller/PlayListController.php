@@ -51,6 +51,13 @@ class PlayListController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
 
 	public function initializeAction() {
+		if ($this->config['addJQuery'] == true) { // add jQuery to the DOM
+			/* @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
+			$pageRenderer = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
+			$pageRenderer->addJsFile(ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jQuery/jquery-1.11.3.min.js', $type = 'text/javascript', $compress = false, $forceOnTop = true, $allWrap = '', $excludeFromConcatenation = true, $splitChar = '|', $async = false, $integrity = '');
+		}
+
+		// TODO: Change this to "addJsFile"
 		$this->response->addAdditionalHeaderData('<link rel="stylesheet" type="text/css" href="' . ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/StyleSheets/base.css" />');
 		$this->response->addAdditionalHeaderData('<script type="text/javascript" src="' . ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/yt_pl.js"></script>');
 
@@ -61,11 +68,7 @@ class PlayListController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
 		$this->config = \Powrup\YoutubePlaylist\Utility\Configuration::getTsArrayByPath($this->configurationManager, "plugin.tx_youtubeplaylist.config");
 
-		if ($this->config['addJQuery'] == true) { // add jQuery to the DOM
-			/* @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
-			$pageRenderer = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
-			$pageRenderer->addJsFile(ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/jQuery/jquery-1.11.3.min.js', $type = 'text/javascript', $compress = false, $forceOnTop = true, $allWrap = '', $excludeFromConcatenation = true, $splitChar = '|', $async = false, $integrity = '');
-		}
+
 	}
 
 
